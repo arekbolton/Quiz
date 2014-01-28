@@ -13,7 +13,7 @@
 -(id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     //Calling the init method of the superclass
-    self = [super initWithNibName:nibBundleOrNil bundle:nibBundleOrNil];
+    self = [super initWithNibName: nibNameOrNil bundle:nibBundleOrNil];
     if(self) {
         //creating two arrays an make the pointers point ot them
         questions = [[NSMutableArray alloc] init];
@@ -46,6 +46,13 @@
     [questionField setText:question];
     
     [answerField setText:@"???"];
+}
+
+-(IBAction)showAnswer:(id)sender
+{
+    NSString *answer = [answers objectAtIndex:currentQuestionIndex];
+    
+    [answerField setText:answer];
 }
 
 @end
