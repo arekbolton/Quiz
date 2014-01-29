@@ -10,10 +10,10 @@
 
 @implementation QuizViewController
 
--(id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+-(id)initWithCoder:(NSCoder *)aDecoder
 {
     //Calling the init method of the superclass
-    self = [super initWithNibName: nibNameOrNil bundle:nibBundleOrNil];
+    self = [super initWithCoder:aDecoder];
     if(self) {
         //creating two arrays an make the pointers point ot them
         questions = [[NSMutableArray alloc] init];
